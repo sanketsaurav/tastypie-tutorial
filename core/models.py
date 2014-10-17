@@ -36,7 +36,7 @@ class BaseModel(models.Model):
         abstract = True
 
 
-class Quotr(BaseModel):
+class Profile(BaseModel):
     """
     A user's profile.
     """

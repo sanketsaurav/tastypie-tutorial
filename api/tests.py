@@ -1,3 +1,6 @@
-from django.test import TestCase
+from core import models
+from tastypie.models import ApiKey
+from tastypie.test import ResourceTestCase
 
-# Create your tests here.
+from django.contrib.auth.models import User
+

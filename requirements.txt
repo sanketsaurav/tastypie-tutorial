@@ -1,8 +1,9 @@
 Django==1.6.5
 argparse==1.2.1
 django-tastypie==0.12.0
+hashids==1.0.1
 python-dateutil==2.2
 python-mimeparse==0.1.4
+pytz==2014.7
 six==1.8.0
 wsgiref==0.1.2
-hashids==1.0.1

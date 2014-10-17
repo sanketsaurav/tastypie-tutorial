@@ -36,6 +36,8 @@ Requirements
 
 - Your favorite text editor. Mine's [ST3](http://www.sublimetext.com/3).
 
+- [Google Chrome](https://www.google.com/chrome/) with [Advanced REST Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo) extension for interacting with APIs.
+
 
 Installation
 ------------

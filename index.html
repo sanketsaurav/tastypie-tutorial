@@ -42,36 +42,74 @@
 			}
 		</style>
 	</div></section>
-	<section class="slide"><div>
+
+	<section class="slide" id="intro"><div>
+		<style>
+			#intro #photo {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				height: 640px;
+			}
+			#intro.slide:after {
+				display: none !important;
+			}
+		</style>
 		<h2>sanket.__doc__</h2>
 		<ul>
 			<li>Part designer, part hacker, full-time geek</li>
-			<li>Co-founder at doselect and CampusHash</li>
-			<li>Have spoken at more than 50 events across the country</li>
+			<li>Co-founder at <strong>doselect</strong> and <strong>CampusHash</strong></li>
+			<li>Have spoken at more than 50 events across<br> the country</li>
 			<li>Active volunteer at India's Python community</li>
-			<li>Frontman of Quantum Chaos, and alternative rock band</li>
+			<li>Frontman of Quantum Chaos, an alternative <br>rock band</li>
 		</ul>
-		<p class="note">You should totally follow me on Twitter. Just sayin'.</p>
-	</div></section>
+		<img src="pictures/picture.jpg" alt="Sanket Saurav" id="photo">
+		</div>
+	</section>
+
 	<section class="slide"><div>
-		<h2>Plain Text on Your Slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</div></section>
-	<section class="slide"><div>
-		<h2>All Kind of Lists</h2>
+		<h2>The Good Parts</h2>
 		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
+			<li>Uses the REST methods and status codes properly</li>
+			<li>Round trippable data
 				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
+					<li>Anything you can <strong>GET</strong>, you can <strong>POST/PUT</strong></li>
 				</ul>
 			</li>
-			<li>Look, seven rows exactly!</li>
+			<li>Super-flexible serialization
+				<ul>
+					<li>JSON, JSONP, XML, YAML, HTML</li>
+				</ul>
+			</li>
+			<li>Fully HATEOAS compatible</li>
+			<li>Extensibility is a core feature</li>
 		</ol>
-	</div></section>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>HATEOAS?</h2>
+		<ol>
+			<li><strong>H</strong>ypermedia <strong>a</strong>s <strong>t</strong>he <strong>E</strong>ngine <strong>o</strong>f <strong>A</strong>pplication <strong>S</strong>tate</li>
+			<li>The user shouldn't have to know <em>anything in advance</em> about the data</li>
+			<li>Complete explorability and deep-linking of data</li>
+			<li>RESTful interaction is driven by hypermedia, rather than out-of-band information</li>
+			<li>Decouples client and server in a way that allows the server functionality to evolve independently</li>
+		</ol>
+	</div>
+	</section>
+
+	<section class="slide shout"><div>
+		<h2>HATEOAS saves the Internet!</h2>
+	</div>
+	</section>
+
+	<!-- <section class="slide"><div>
+		<h2>Plain Text on Your Slides</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	</section>
+
 	<section class="slide"><div>
 		<h2>Serious Citations</h2>
 		<figure>
@@ -80,7 +118,9 @@
 			</blockquote>
 			<figcaption>Marcus Tullius Cicero</figcaption>
 		</figure>
-	</div></section>
+	</div>
+	</section>
+
 	<section class="slide"><div>
 		<h2>Code Samples</h2>
 		<pre>
@@ -92,7 +132,9 @@
 			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
 			<code><mark>&lt;/head&gt;</mark></code>
 		</pre>
-	</div></section>
+		</div>
+	</section>
+
 	<section class="slide"><div>
 		<h2>Even Tables</h2>
 		<table>
@@ -128,7 +170,9 @@
 		</tr>
 		</table>
 		<p>It’s good to have information organized.</p>
-	</div></section>
+	</div>
+	</section>
+
 	<section class="slide cover" id="Picture"><div>
 		<h2>Pictures</h2>
 		<img src="pictures/picture.jpg" alt="">
@@ -137,10 +181,14 @@
 				color:#FFF;
 				}
 		</style>
-	</div></section>
+	</div>
+	</section>
+
 	<section class="slide shout"><div>
 		<h2>You can even shout this way</h2>
-	</div></section>
+	</div>
+	</section>
+
 	<section class="slide"><div>
 		<h2>Inner Navigation</h2>
 		<ol>
@@ -150,7 +198,9 @@
 			<li class="next">But it will work only once</li>
 			<li class="next">Nobody wants to see the same joke twice</li>
 		</ol>
-	</div></section>
+	</div>
+	</section>
+
 	<section class="slide shout" id="SeeMore"><div>
 		<h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower">See more on GitHub</a></h2>
 		<style>
@@ -165,7 +215,9 @@
 				height:0.72em;
 				}
 		</style>
-	</div></section>
+	</div>
+	</section> -->
+
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>
 	<!-- Copyright © 2014 Sanket Saurav, doselect. -->

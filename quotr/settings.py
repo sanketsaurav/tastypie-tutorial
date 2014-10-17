@@ -1,5 +1,5 @@
 """
-Django settings for tastytut project.
+Django settings for quotr project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'hf6+@t24=s0(8ghekk45jji0j1jpkiibp8qz43uh^&_f4xqkke'
+SECRET_KEY = '-+jihbq7#=%zrpl)1+9r#5$*=jsya*nq54zcn=^2m*#^r!f9fe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -36,6 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tastypie',
+    'core',
+    'api'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -47,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'tastytut.urls'
+ROOT_URLCONF = 'quotr.urls'
 
-WSGI_APPLICATION = 'tastytut.wsgi.application'
+WSGI_APPLICATION = 'quotr.wsgi.application'
 
 
 # Database
@@ -80,3 +83,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Tastypie-specific settings
+
+TASTYPIE_ALLOW_MISSING_SLASH = True
+TASTYPIE_DATETIME_FORMATTING = 'rfc-2822'
+
+# Hashids settings
+
+HASHIDS_SALT = 'ac7df232f13f9ff59425d48d121575f1d85ce046'
+HASHIDS_ALPHABET = 'z7rmackyf6tl0hdwbe2g391qvxoi4psn8uj5'
+HASHIDS_MIN_LENGTH = 5

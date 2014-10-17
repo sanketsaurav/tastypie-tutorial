@@ -1,8 +1,8 @@
-Delicious RESTful APIs with Django Tastypie
-===========================================
+[Delicious REST APIs with Django and Tastypie](http://sanketsaurav.github.io/tastypie-tutorial/)
+================================================================================================
 By [@sanketsaurav](http://twitter.com/sanketsaurav).
 
-Tastypie is a webservice API framework for Django. It provides a convenient, yet powerful and highly customizable, abstraction for creating REST-style interfaces.
+Tastypie is a webservice API framework for Django. It provides a convenient, yet powerful and highly customizable, abstraction for creating REST-style interfaces. The slide deck can be found [here](http://sanketsaurav.github.io/tastypie-tutorial/).
 
 
 Agenda

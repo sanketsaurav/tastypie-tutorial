@@ -68,6 +68,121 @@
 	</section>
 
 	<section class="slide"><div>
+		<h2>What is REST?</h2>
+		<figure>
+			<blockquote>
+				<p>Representational state transfer (REST) is an abstraction of the architecture of the World Wide Web; more precisely, REST is an architectural style consisting of a coordinated set of architectural constraints applied to components, connectors, and data elements, within a distributed hypermedia system.</p>
+			</blockquote>
+			<figcaption>Wikipedia</figcaption>
+		</figure>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>What is REST?</h2>
+		<ul>
+			<li>Resource-oriented</li>
+			<li>DRY</li>
+			<li>Cache-ready</li>
+			<li>Stateless</li>
+		</ul>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Methods</h2>
+		<ul>
+			<li>Safe methods
+				<ul>
+					<li>GET, HEAD, TRACE, OPTIONS</li>
+				</ul>
+			</li>
+			<li>Unsafe methods
+				<ul>
+					<li>PUT, POST, PATCH, DELETE</li>
+				</ul>
+			</li>
+			<li>Control methods
+				<ul>
+					<li>CONNECT</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Status Codes</h2>
+		<ul>
+			<li><strong>1xx</strong> - Informational Messages</li>
+			<li><strong>2xx</strong> - Success</li>
+			<li><strong>3xx</strong> - Redirection</li>
+			<li><strong>4xx</strong> - Client Error ("You messed up!")</li>
+			<li><strong>5xx</strong> - Server Error ("I messed up!")</li>
+		</ul>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Resources</h2>
+		<figure>
+			<blockquote>
+				<p>A resource (R) is a temporary varying membership function M(t), which for time <em>t</em>
+				maps to a set of entities, or values, which are equivalent.</p>
+			</blockquote>
+			<figcaption>Roy Fielding</figcaption>
+		</figure>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Resources</h2>
+		<ul>
+			<li>An abstraction of some entity, or a collection of entities, that we can identify by a name
+				<li>"all quotes created by user 1"</li>
+				<li>"all quotes modified between October 12th, 2014 and October 15th, 2014"</li>
+			</li>
+			<li>On the web, we use Uniform Resource Identifiers (URIs)</li>
+		</ul>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+		<h2>Representations</h2>
+		<ul>
+			<li>In order to interact with a resource, we use a representation of that resource</li>
+			<li>Representations contain <strong>data</strong> and <strong>metadata</strong></li>
+			<li>Resources are <em>abstract</em>, representations are <em>concrete</em></li>
+			<li>Representations are the actual bytes that are transferred between clients and servers, including metadata</li>
+		</ul>
+	</div>
+	</section>
+
+	<section class="slide"><div>
+	<style>
+		pre {
+			font-size: 19px;
+		}
+	</style>
+		<h2>Representations</h2>
+		<pre>
+<code>GET /api/v1/quote/l8rdp
+
+200 OK
+Content-Type: application/json
+{
+	author: "/api/v1/author/albus-dumbledore"
+	created: "Fri, 17 Oct 2014 20:33:19 +0000"
+	quote: "Harry is the best hope we have. Trust him."
+	resource_uri: "/api/v1/quote/l8rdp"
+	uid: "l8rdp"
+}
+</code>
+		</pre>
+		</div>
+	</section>
+
+	<section class="slide"><div>
 		<h2>The Good Parts</h2>
 		<ol>
 			<li>Uses the REST methods and status codes properly</li>
@@ -100,123 +215,25 @@
 	</section>
 
 	<section class="slide shout"><div>
-		<h2>HATEOAS saves the Internet!</h2>
-	</div>
-	</section>
-
-	<!-- <section class="slide"><div>
-		<h2>Plain Text on Your Slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</div>
-	</section>
-
-	<section class="slide"><div>
-		<h2>Serious Citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</div>
-	</section>
-
-	<section class="slide"><div>
-		<h2>Code Samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code>&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-		</div>
-	</section>
-
-	<section class="slide"><div>
-		<h2>Even Tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</div>
-	</section>
-
-	<section class="slide cover" id="Picture"><div>
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="">
-		<style>
-			#Picture h2 {
-				color:#FFF;
-				}
-		</style>
+		<h2>C R U D</h2>
 	</div>
 	</section>
 
 	<section class="slide shout"><div>
-		<h2>You can even shout this way</h2>
+		<h2>List &amp; Detail</h2>
 	</div>
 	</section>
 
 	<section class="slide"><div>
-		<h2>Inner Navigation</h2>
+		<h2>The Dehydrate Cycle</h2>
 		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
+			<li>Put the data model into a Bundle instance, which is then passed through the various methods.</li>
+			<li>Run through all fields on the Resource, letting each field perform its own dehydrate method on the bundle.</li>
+			<li>While processing each field, look for a dehydrate_<fieldname> method on the Resource. If it’s present, call it with the bundle.</li>
+			<li>Finally, after all fields are processed, if the dehydrate method is present on the Resource, it is called & given the entire bundle.</li>
 		</ol>
 	</div>
 	</section>
-
-	<section class="slide shout" id="SeeMore"><div>
-		<h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower">See more on GitHub</a></h2>
-		<style>
-			#Picture h2 {
-				color:#FFF;
-				}
-			#SeeMore h2 {
-				font-size:100px
-				}
-			#SeeMore img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
-	</div>
-	</section> -->
 
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>
